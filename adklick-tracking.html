@@ -1,0 +1,21 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.3/url.min.js"></script>
+<script>
+	
+	adklick_tracking();
+	
+	function adklick_tracking() {
+		
+		let lead_url = 'https://ralfschmitz.co/73e0824b.php?action=order&orderid=', // Hier bitte deine AdKlick-Tracking-URL eintragen
+		    email_tag = 'email', // Hier den GET-Parameter für die E-Mail-Adresse eintragen
+		    xhttp = new XMLHttpRequest();
+		
+		if( url( '?' + email_tag ) !== undefined ) {
+			
+			xhttp.open( 'GET', lead_url + url( '?' + email_tag ), true );
+			xhttp.send();
+			
+		}
+		
+	}
+	
+</script>
